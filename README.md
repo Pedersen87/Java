@@ -1,4 +1,14 @@
+![Use Case](https://github.com/Pedersen87/2020-isgc08-pedersen/blob/main/images/UseCaseDiagram1.png)
+![alt text](https://github.com/Pedersen87/2020-isgc08-pedersen/blob/main/images/Create.png)
+![alt text](https://github.com/Pedersen87/2020-isgc08-pedersen/blob/main/images/Open.png)
+![alt text](https://github.com/Pedersen87/2020-isgc08-pedersen/blob/main/images/Write.png)
+![alt text](https://github.com/Pedersen87/2020-isgc08-pedersen/blob/main/images/Skriva(design).png)
+![alt text](https://github.com/Pedersen87/2020-isgc08-pedersen/blob/main/images/Öppna(design).png)
+![alt text](https://github.com/Pedersen87/2020-isgc08-pedersen/blob/main/images/Skapa(design).png)
+![alt text](https://github.com/Pedersen87/2020-isgc08-pedersen/blob/main/images/Spara som(design).png)
+![alt text](https://github.com/Pedersen87/2020-isgc08-pedersen/blob/main/images/Spara som.png)
+![alt text](https://github.com/Pedersen87/2020-isgc08-pedersen/blob/main/images/Spara(design).png)
+![alt text](https://github.com/Pedersen87/2020-isgc08-pedersen/blob/main/images/Spara.png)
 ![alt text](https://github.com/Pedersen87/2020-isgc08-pedersen/blob/main/images/Avsluta(design).png)
-
-
-{% for i in (1..5) %}![image](https://github.com/Pedersen87/2020-isgc08-pedersen/blob/main/images/{{ i }}.png 'image')  {{ i }}|{% endfor %}
+![alt text](https://github.com/Pedersen87/2020-isgc08-pedersen/blob/main/images/Avsluta.png)
+![alt text](https://github.com/Pedersen87/2020-isgc08-pedersen/blob/main/images/ClassDiagram.png)
