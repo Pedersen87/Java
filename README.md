@@ -1,1 +1,1 @@
-![alt text](C:\Users\Owner\OneDrive\Desktop\ISGC08 "Logo Title Text 1")
+![alt text](https://github.com/Pedersen87/2020-isgc08-pedersen/blob/main/images/ClassDiagram.pdf "Logo Title Text 1")
