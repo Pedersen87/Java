@@ -1,6 +1,8 @@
 package labb2;
 
 import java.awt.event.*;
+import java.io.File;
+import java.nio.file.Path;
 
 import javax.swing.*;
 
@@ -9,6 +11,7 @@ public class View extends WindowAdapter implements ActionListener {
 	JTextArea write;
 	JFrame jFrame;
 	JMenuBar jMenuBar;
+	private JFileChooser jFileChooser = new JFileChooser();
 	View(Controler ct){
 		c = ct;
 		jFrame = new JFrame("Nytt dokument"); 
@@ -38,6 +41,24 @@ public class View extends WindowAdapter implements ActionListener {
         jFrame.show(); 
 	}
 
+	public File chooseFile() {
+		int i = jFileChooser.showSaveDialog(null);		
+		if(i == JFileChooser.APPROVE_OPTION) {
+			File file = new File(jFileChooser.getSelectedFile().getAbsolutePath());
+			return file;
+		}
+		return null;
+	}
+	
+	public Path chooseOpenFile() {
+		int j = jFileChooser.showOpenDialog(null);
+		if(j == JFileChooser.APPROVE_OPTION) {
+			Path file = jFileChooser.getSelectedFile().toPath();
+			return file;
+		}
+		return null;
+	}
+	
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		String choice = e.getActionCommand();

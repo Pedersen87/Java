@@ -1,56 +1,40 @@
 package labb2;
 
-import javax.swing.*;
-
+import java.io.File;
+import java.nio.file.Path;
 
 public class Controler{
 	private View v;
 	private Model m;
-	private JOptionPane joptionpane = new JOptionPane();
-	private int i;
+	
 	Controler(){
 		m = new Model();
 		v = new View(this);
 	}
-	
 		public void eventIn(String choice) {
 			
 			if(choice.equals("New")) {
-				i = JOptionPane.showConfirmDialog(joptionpane,"Do you want to save?","Warning!",JOptionPane.YES_NO_OPTION);
-				if(i==0) {
-					m.saveFile(v.write.getText());
-					v.write.setText(m.newFile());
-				}
-				else {
-					v.write.setText(m.newFile());
-				}
-								
+					v.write.setText(m.newFile());		
 			}
 			if(choice.equals("Open")) {	
-				i = JOptionPane.showConfirmDialog(joptionpane,"Do you want to save?","Warning!",JOptionPane.YES_NO_OPTION);
-				if(i==0) {
-					m.saveFile(v.write.getText());
-					v.write.setText(m.openFile());
+				Path file = v.chooseOpenFile();
+				if(file!=null) {
+					v.write.setText(m.openFile(file));						
 				}
-				else {
-					v.write.setText(m.openFile());								
-				}			
+				
 			}
 			if(choice.equals("Save")) {
 				m.saveFile(v.write.getText());				
 			}
 			if(choice.equals("Save as")) {
-				m.saveAsFile(v.write.getText());
+				File file = v.chooseFile();
+				if(file != null) {
+					m.saveAsFile(v.write.getText(),file);
+				}
 			}
 			if(choice.equals("Exit")) {
-				i = JOptionPane.showConfirmDialog(joptionpane,"Do you want to save?","Warning!",JOptionPane.YES_NO_OPTION);
-				if(i==0) {
 					m.saveFile(v.write.getText());
 					m.exitMethod();	
-				}
-				else {
-					m.exitMethod();					
-				}
 			}
 		}
 
