@@ -28,8 +28,8 @@ public class Model implements EventListener {
 	}
 	
 	public void saveFile(String s) {
-		File file = new File(path);
-		if(file.exists()){
+		File file = new File(path);	
+		if(file.exists() && !path.isEmpty()){
 			if(path.contains(".txt")){
 				try { 
 					FileWriter fw = new FileWriter(file,false); 
@@ -89,7 +89,7 @@ public class Model implements EventListener {
         } 
 
 	public String openFile(Path file) {
-			
+			path = file.toString();
 			    	try {
 			    	    InputStream in = Files.newInputStream(file);
 			    	    BufferedReader reader = new BufferedReader(new InputStreamReader(in)); 
